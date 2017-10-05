@@ -1,2 +1,2 @@
-# LeeCode
-LeeCode
+# LeetCode
+LeetCode
