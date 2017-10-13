@@ -52,7 +52,6 @@ class Solution2{
 			if(map.containsKey(num1)&&map.get(num1)!=i) {
 				return new int[] {map.get(num1),i};
 			}
-			
 		}
 		throw new IllegalArgumentException("No two sum solution");
 	}
