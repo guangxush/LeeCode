@@ -31,7 +31,7 @@ public class BestTimetoBuyandSellStock1 {
         int global = 0;//全局最优解
         int local = 0;//局部最优解
         for(int i = 0;i<prices.length-1;i++) {
-        	local = Math.max(local+prices[i+1]-prices[i],local);
+        	local = Math.max(local+prices[i+1]-prices[i],0);
         	global = Math.max(local, global);
         }
         return global;
