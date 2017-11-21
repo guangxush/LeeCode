@@ -21,7 +21,7 @@ public class ValidAnagram {
         return String.valueOf(sArr).equals(String.valueOf(tArr));
     }
 	public boolean isAnagram1(String s, String t) {
-		if(s.length()!=toString().length()) return false;
+		if(s.length()!=t.length()) return false;
 		char[] sArr = s.toCharArray();
 		char[] tArr = t.toCharArray();
 		int[] temp = new int[128];
