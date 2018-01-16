@@ -19,7 +19,7 @@ public class IslandPerimeter {
         int n = grid.length;
         int m = grid[0].length;
         for(int i = 0;i<n;i++) {
-        	for(int j=0;j<n;j++) {
+        	for(int j=0;j<m;j++) {
         		if(grid[i][j]==1) {
         			if(i==0||grid[i-1][j]==0) permeter++;
         			if(i==n-1||grid[i+1][j]==0) permeter++;
