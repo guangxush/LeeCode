@@ -21,3 +21,18 @@ public class AddDigits {
         return (num-1)%9+1;
     }
 }
+
+/*
+//It is a simple math as output is required to be a single  digit i.e <=9
+// also it is written => Could you do it without any loop/recursion in O(1) runtime?
+
+
+class Solution {
+    public int addDigits(int num) {
+        return num < 10 ? num : num % 9 == 0 ? 9 : num % 9;  
+    }
+}
+
+
+
+*/
