@@ -32,6 +32,55 @@ public class MedianofTwoSortedArrays {
 			return getkth(A, aStart,       B, bStart + k/2, k - k/2);// Check: bRight + aLeft
 	}
 }
+
+
+/*
+Iterative approach
+
+class Solution {
+    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        int n1 = nums1.length;
+        int n2 = nums2.length;
+        int median = (n1+n2)/2;
+        int temp[] = new int[n1+n2];
+        
+        int idx = 0;
+        int pos1 = 0;
+        int pos2 = 0;
+        
+        while(pos1<n1 && pos2<n2){
+            if(nums1[pos1]<=nums2[pos2]){
+                temp[idx] = nums1[pos1];
+                pos1++;
+            }
+            else{
+                temp[idx] = nums2[pos2];
+                pos2++;
+            }
+            idx++;
+        }
+        while(pos1<n1){
+            temp[idx] = nums1[pos1];
+            idx++;
+            pos1++;
+        }
+        while(pos2<n2){
+            temp[idx] = nums2[pos2];
+            idx++;
+            pos2++;
+        }
+        
+        if(idx%2==0)
+            return (double)(temp[median-1]+temp[median])/2;
+        else
+            return temp[median];
+    }
+}
+
+
+
+
+*/
 /**
  * 对于一个长度为n的已排序数列a，若n为奇数，中位数为a[n / 2 + 1] , 
     若n为偶数，则中位数(a[n / 2] + a[n / 2 + 1]) / 2
